@@ -2,21 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def create_sine_wave(frequency, duration, sampling_rate=44100):
- t = np.linspace(0, duration, int(sampling_rate * duration))
- y = np.sin(2 * np.pi * frequency * t)
- return t, y
+  t = np.linspace(0, duration, int(sampling_rate * duration))
+  y = np.sin(2 * np.pi * frequency * t)
+  return t, y
 
 def create_step_signal(duration, sampling_rate=44100):
- t = np.linspace(0, duration, int(sampling_rate * duration))
- y= np.ones_like(t)
- y[int(len(y)/2):]=0
- return t,y
+  t = np.linspace(0, duration, int(sampling_rate * duration))
+  y= np.ones_like(t)
+  y[int(len(y)/2):]=0
+  return t,y
 
 def time_shift(t, y, shift_amount):
- return t + shift_amount, y
+  return t + shift_amount, y
 
 def time_scale(t, y, scale_factor):
- return t * scale_factor, y
+  return t * scale_factor, y
  
 t1, y1 = create_sine_wave(frequency=2, duration=2)
 t2, y2 = create_step_signal(duration=2)
