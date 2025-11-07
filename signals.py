@@ -51,4 +51,4 @@ plt.xlabel("Time (seconds)")
 plt.ylabel("Amplitude")
 
 plt.tight_layout()
-plt.show()
+plt.show() 
